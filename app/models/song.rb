@@ -22,6 +22,7 @@ class Song < ActiveRecord::Base
   def note_contents=(notes)
     notes.each do |note|
       self.notes.build(content: note) unless note.blank?
+    end
   end
 
   def note_contents

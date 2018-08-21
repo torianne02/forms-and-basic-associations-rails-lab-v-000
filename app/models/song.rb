@@ -10,4 +10,16 @@ class Song < ActiveRecord::Base
   def artist_name
     self.artist ? self.artist.name : nil
   end
+
+  def genre_name=(genre)
+  end
+
+  def genre_name
+  end
+
+  def note_contents=(notes)
+  end
+
+  def note_contents
+  end
 end

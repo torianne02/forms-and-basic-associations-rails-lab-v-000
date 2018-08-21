@@ -20,8 +20,11 @@ class Song < ActiveRecord::Base
   end
 
   def note_contents=(notes)
+    notes.each do |note|
+      self.notes.build(content: note) unless note.blank?
   end
 
   def note_contents
+    self.notes.map { |note| note.content }
   end
 end
